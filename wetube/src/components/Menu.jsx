@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import wetube from '../images/wetube.png'
 import HomeIcon from '@mui/icons-material/Home';
 import ExploreOutlinedIcon from "@mui/icons-material/ExploreOutlined";
 import SubscriptionsOutlinedIcon from "@mui/icons-material/SubscriptionsOutlined";
@@ -19,37 +18,34 @@ import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
 import SettingsBrightnessOutlinedIcon from "@mui/icons-material/SettingsBrightnessOutlined";
 import { Link } from 'react-router-dom';
 
-const Container=styled.div`
-flex:1;
-background-color:${({theme})=>theme.bgLighter};
-${'' /* height:100vh; */}
-color:${({theme})=>theme.text};
-position:sticky;
-top:0;
+const Container=styled.div`  flex: 1;
+background-color: ${({ theme }) => theme.bgLighter};
+height: 100vh;
+color: ${({ theme }) => theme.text};
+font-size: 14px;
+position: sticky;
+top: 0;
 `;
  
 const Wrapper=styled.div`
-padding: 15px 26px
+padding: 15px 23px;
+    ${'' /* top: 62px;
+    bottom: 0; */}
+
 `;
 
-const Logo=styled.div`
-display:flex;
-align-items:center;
-gap:5px;
-${'' /* font-weight:bold; */}
-margin-bottom:25px;
-`;
 
-const Img=styled.img`
-height:25px;
-`;
 
 const Item=styled.div`
 display:flex;
 align-items:center;
 gap:20px;
 cursor:pointer;
-padding:7px 0px;
+padding:7px 5px;
+
+&:hover {
+    background-color: ${({ theme }) => theme.soft};
+}
 `;
 
 const Hr=styled.div`
@@ -78,12 +74,6 @@ const Menu = ({darkMode,setDarkMode}) => {
   return (
     <Container>
         <Wrapper>
-        <Link to="/" style={{textDecoration:'none', color:'inherit'}}>
-            <Logo>
-                <Img src={wetube}/>
-                    WeTube
-            </Logo>
-            </Link> 
             <Item>
             <HomeIcon/>
                 Home
@@ -108,15 +98,14 @@ const Menu = ({darkMode,setDarkMode}) => {
         <Hr />
         <Login>
           Sign in to like videos, comment, and subscribe.
-          {/* <Link to="signin" style={{textDecoration:"none"}}> */}
+          <Link to="signin" style={{textDecoration:"none"}}>
             <Button>
               <AccountCircleOutlinedIcon />
               SIGN IN
             </Button>
-          {/* </Link> */}
+          </Link>
         </Login>
         <Hr />
-        {/* <Title>BEST OF LAMATUBE</Title> */}
         <Item>
           <LibraryMusicOutlinedIcon />
           Music

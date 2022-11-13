@@ -4,6 +4,7 @@ import ThumbUpOutlinedIcon from "@mui/icons-material/ThumbUpOutlined";
 import ThumbDownOffAltOutlinedIcon from "@mui/icons-material/ThumbDownOffAltOutlined";
 import ReplyOutlinedIcon from "@mui/icons-material/ReplyOutlined";
 import AddTaskOutlinedIcon from "@mui/icons-material/AddTaskOutlined";
+import RecommCard from './RecommCard';
 
 const Container=styled.div`
 display:flex;
@@ -159,7 +160,14 @@ const Video = () => {
 
 
       </Content>
-      <Recomm>recommendation</Recomm>
+      <Recomm>
+      <RecommCard type='sm'></RecommCard>
+      <RecommCard type='sm'></RecommCard>
+      <RecommCard type='sm'></RecommCard>
+      <RecommCard type='sm'></RecommCard>
+      <RecommCard type='sm'></RecommCard>
+      <RecommCard type='sm'></RecommCard>
+      </Recomm>
     </Container>
   )
 }

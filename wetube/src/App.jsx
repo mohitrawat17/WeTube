@@ -8,15 +8,14 @@ import { darkTheme, lightTheme } from "./utils/Themes";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Video from './components/Video';
 import Home from './components/Home';
+import SignIn from './components/SignIn'
 
 const Container=styled.div`
-display: flex;
-
 `;
 
 const Main=styled.div`
-flex:7;
-background-color:${({theme})=>theme.bg}
+display: flex;
+background-color:${({theme})=>theme.bg};
 `;
 
 const Wrapper=styled.div`
@@ -34,14 +33,15 @@ const App = () => {
 <ThemeProvider theme={darkMode?darkTheme:lightTheme}>
     <Container>
     <BrowserRouter>
-        <Menu darkMode={darkMode} setDarkMode={setDarkMode} />
-
+       
+        <Navbar/>
         <Main>
-            <Navbar/>
+            <Menu darkMode={darkMode} setDarkMode={setDarkMode} />
 
             <Wrapper>
                 <Routes>
                   <Route path='/'>
+                  <Route path='signin' element={<SignIn/>}/>
                          <Route index element={<Home/>}/>
                          <Route path='video'>
                             <Route path=':id' element={<Video/>}/>
