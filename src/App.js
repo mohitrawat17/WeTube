@@ -3,13 +3,32 @@ import Body from "./Body";
 import Header from "./Header"
 import {Provider} from "react-redux"
 import store from "./utils/store.js";
+import Container from "./Container";
+import CardDetails from "./CardDetails";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 function App() {
+  const appRouter=createBrowserRouter([{
+    path:"/",
+    element:<Body/>,
+    children:[{
+       path:"/",
+       element:<Container/>
+    },
+    {
+      path:"/watch",
+      element:<CardDetails/>
+    }
+  ]
+  }])
+
+
+
   return (
     <Provider store={store}>
-    <div className="w-full h-full text-slate-50">
+    <div  className=" text-slate-50">
     <Header/>
-    <Body/>
+    <RouterProvider router={appRouter}/>
     
     </div>
     </Provider>

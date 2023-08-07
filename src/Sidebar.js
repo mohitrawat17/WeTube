@@ -18,6 +18,7 @@ import SportsBaseballIcon from '@mui/icons-material/SportsBaseball';
 import LocalLibraryIcon from '@mui/icons-material/LocalLibrary';
 import DiamondIcon from '@mui/icons-material/Diamond';
 import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 
 const Sidebar = () => {
@@ -30,21 +31,13 @@ const Sidebar = () => {
 
   
   return isMenuOpen ?
-    (
-      <div className='flex flex-col mx-3'>
-        <HomeIcon className='my-2 cursor-pointer'/>
-        <SlideshowIcon className='my-2 cursor-pointer'/>
-        <SubscriptionsIcon className='my-2 cursor-pointer'/>
-        <LocalLibraryIcon className='my-2 cursor-pointer'/>
-      </div>
-    )
-  :
+
   (
-    <div className='mx-3'>
+    <div className='mx-3 w-44'>
 
 
       <ul className='py-2'>
-        <li className='cursor-pointer hover:bg-gray-700 hover:rounded-md py-[2px]'><HomeIcon className='mr-5'/>Home</li>
+      <Link to="/">  <li className='cursor-pointer hover:bg-gray-700 hover:rounded-md py-[2px]'><HomeIcon className='mr-5'/>Home</li></Link>
         <li className='cursor-pointer hover:bg-gray-700 hover:rounded-md py-[2px]'><SlideshowIcon className='mr-5'/>Shorts</li>
         <li className='cursor-pointer hover:bg-gray-700 hover:rounded-md py-[2px]'><SubscriptionsIcon className='mr-5'/>Subscriptions</li>
       </ul>
@@ -77,6 +70,18 @@ const Sidebar = () => {
       </ul>
     </div>
   )
-}
+
+    
+  :
+
+  (
+    <div className='flex flex-col mx-3'>
+     <Link to="/">  <HomeIcon className='my-2 cursor-pointer'/></Link>
+      <SlideshowIcon className='my-2 cursor-pointer'/>
+      <SubscriptionsIcon className='my-2 cursor-pointer'/>
+      <LocalLibraryIcon className='my-2 cursor-pointer'/>
+    </div>
+  )
+  }
 
 export default Sidebar

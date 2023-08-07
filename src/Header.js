@@ -20,6 +20,7 @@ const Header = () => {
       {/* hamburger, logo */}
       <div className="flex col-span-1 ">
         <MenuIcon onClick={()=>handleToggle()} className="text-white my-auto cursor-pointer hover:bg-gray-700 p-[3px] hover:rounded-full"  style={iconStyle}/>
+       
         <img
         alt="logo"
           className="w-11 h-8 ml-4 cursor-pointer"
@@ -28,6 +29,8 @@ const Header = () => {
         <h2 className="cursor-pointer text-white font-bold text-xl ml-1">
           WeTube
         </h2>
+        
+        
       </div>
 
       {/* search */}
