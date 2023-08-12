@@ -37,9 +37,9 @@ const Sidebar = () => {
 
 
       <ul className='py-2'>
-      <Link to="/">  <li className='cursor-pointer hover:bg-gray-700 hover:rounded-md py-[2px]'><HomeIcon className='mr-5'/>Home</li></Link>
-        <li className='cursor-pointer hover:bg-gray-700 hover:rounded-md py-[2px]'><SlideshowIcon className='mr-5'/>Shorts</li>
-        <li className='cursor-pointer hover:bg-gray-700 hover:rounded-md py-[2px]'><SubscriptionsIcon className='mr-5'/>Subscriptions</li>
+      <Link to="/">  <li className='cursor-pointer hover:bg-[#4b4a4a] hover:rounded-md py-[2px]'><HomeIcon className='mr-5'/>Home</li></Link>
+        <li className='cursor-pointer hover:bg-[#4b4a4a] hover:rounded-md py-[2px]'><SlideshowIcon className='mr-5'/>Shorts</li>
+        <li className='cursor-pointer hover:bg-[#4b4a4a] hover:rounded-md py-[2px]'><SubscriptionsIcon className='mr-5'/>Subscriptions</li>
       </ul>
 
         <hr className=''></hr>
@@ -47,26 +47,26 @@ const Sidebar = () => {
 
 
       <ul className='py-2'>
-          <li className='cursor-pointer hover:bg-gray-700 hover:rounded-md py-[2px]'><QueueIcon className='mr-5'/>Library</li>
-          <li className='cursor-pointer hover:bg-gray-700 hover:rounded-md py-[2px]'><HistoryIcon className='mr-5'/>History</li>
-          <li className='cursor-pointer hover:bg-gray-700 hover:rounded-md py-[2px]'><SmartDisplayIcon className='mr-5'/>Your Videos</li>
-          <li className='cursor-pointer hover:bg-gray-700 hover:rounded-md py-[2px]'><AccessTimeIcon className='mr-5'/>Watch Later</li>
-          <li className='cursor-pointer hover:bg-gray-700 hover:rounded-md py-[2px]'><ArrowDropDownIcon className='mr-5'/>Show More</li>
+          <li className='cursor-pointer hover:bg-[#4b4a4a] hover:rounded-md py-[2px]'><QueueIcon className='mr-5'/>Library</li>
+          <li className='cursor-pointer hover:bg-[#4b4a4a] hover:rounded-md py-[2px]'><HistoryIcon className='mr-5'/>History</li>
+          <li className='cursor-pointer hover:bg-[#4b4a4a] hover:rounded-md py-[2px]'><SmartDisplayIcon className='mr-5'/>Your Videos</li>
+          <li className='cursor-pointer hover:bg-[#4b4a4a] hover:rounded-md py-[2px]'><AccessTimeIcon className='mr-5'/>Watch Later</li>
+          <li className='cursor-pointer hover:bg-[#4b4a4a] hover:rounded-md py-[2px]'><ArrowDropDownIcon className='mr-5'/>Show More</li>
       </ul>
 
        <hr></hr>
       <ul className='py-2'>
         <h3 className='font-bold pb-2'>Explore</h3>
-        <li className='cursor-pointer hover:bg-gray-700 hover:rounded-md py-[2px]'><WhatshotIcon className='mr-5'/>Trending</li>
-        <li className='cursor-pointer hover:bg-gray-700 hover:rounded-md py-[2px]'><ShoppingBagIcon className='mr-5'/>Shopping</li>
-        <li className='cursor-pointer hover:bg-gray-700 hover:rounded-md py-[2px]'><MusicNoteIcon className='mr-5'/>Music</li>
-        <li className='cursor-pointer hover:bg-gray-700 hover:rounded-md py-[2px]'><MovieIcon className='mr-5'/>Movie</li>
-        <li className='cursor-pointer hover:bg-gray-700 hover:rounded-md py-[2px]'><LiveTvIcon className='mr-5'/>Live</li>
-        <li className='cursor-pointer hover:bg-gray-700 hover:rounded-md py-[2px]'><SportsEsportsIcon className='mr-5'/>Gaming</li>
-        <li className='cursor-pointer hover:bg-gray-700 hover:rounded-md py-[2px]'><NewspaperIcon className='mr-5'/>News</li>
-        <li className='cursor-pointer hover:bg-gray-700 hover:rounded-md py-[2px]'><SportsBaseballIcon className='mr-5'/>Sports</li>
-        <li className='cursor-pointer hover:bg-gray-700 hover:rounded-md py-[2px]'><LocalLibraryIcon className='mr-5'/>Learning</li>
-        <li className='cursor-pointer hover:bg-gray-700 hover:rounded-md py-[2px]'><DiamondIcon className='mr-5'/>Fashion & Beauty</li>
+        <li className='cursor-pointer hover:bg-[#4b4a4a] hover:rounded-md py-[2px]'><WhatshotIcon className='mr-5'/>Trending</li>
+        <li className='cursor-pointer hover:bg-[#4b4a4a] hover:rounded-md py-[2px]'><ShoppingBagIcon className='mr-5'/>Shopping</li>
+        <li className='cursor-pointer hover:bg-[#4b4a4a] hover:rounded-md py-[2px]'><MusicNoteIcon className='mr-5'/>Music</li>
+        <li className='cursor-pointer hover:bg-[#4b4a4a] hover:rounded-md py-[2px]'><MovieIcon className='mr-5'/>Movie</li>
+        <li className='cursor-pointer hover:bg-[#4b4a4a] hover:rounded-md py-[2px]'><LiveTvIcon className='mr-5'/>Live</li>
+        <li className='cursor-pointer hover:bg-[#4b4a4a] hover:rounded-md py-[2px]'><SportsEsportsIcon className='mr-5'/>Gaming</li>
+        <li className='cursor-pointer hover:bg-[#4b4a4a] hover:rounded-md py-[2px]'><NewspaperIcon className='mr-5'/>News</li>
+        <li className='cursor-pointer hover:bg-[#4b4a4a] hover:rounded-md py-[2px]'><SportsBaseballIcon className='mr-5'/>Sports</li>
+        <li className='cursor-pointer hover:bg-[#4b4a4a] hover:rounded-md py-[2px]'><LocalLibraryIcon className='mr-5'/>Learning</li>
+        <li className='cursor-pointer hover:bg-[#4b4a4a] hover:rounded-md py-[2px]'><DiamondIcon className='mr-5'/>Fashion & Beauty</li>
       </ul>
     </div>
   )
