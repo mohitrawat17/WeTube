@@ -75,7 +75,7 @@ const Sidebar = () => {
   :
 
   (
-    <div className='flex flex-col mx-3'>
+    <div className='flex flex-col mx-3 mt-2'>
      <Link to="/">  <HomeIcon className='my-2 cursor-pointer'/></Link>
       <SlideshowIcon className='my-2 cursor-pointer'/>
       <SubscriptionsIcon className='my-2 cursor-pointer'/>
