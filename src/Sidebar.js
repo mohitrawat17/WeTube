@@ -33,10 +33,10 @@ const Sidebar = () => {
   return isMenuOpen ?
 
   (
-    <div className='mx-3 w-44'>
+    <div className='-mt-1 bg-[#0C0C0C] rgb(12, 12, 12) w-44 fixed'>
 
 
-      <ul className='py-2'>
+      <ul>
       <Link to="/">  <li className='cursor-pointer hover:bg-[#4b4a4a] hover:rounded-md py-[2px]'><HomeIcon className='mr-5'/>Home</li></Link>
         <li className='cursor-pointer hover:bg-[#4b4a4a] hover:rounded-md py-[2px]'><SlideshowIcon className='mr-5'/>Shorts</li>
         <li className='cursor-pointer hover:bg-[#4b4a4a] hover:rounded-md py-[2px]'><SubscriptionsIcon className='mr-5'/>Subscriptions</li>
@@ -67,6 +67,10 @@ const Sidebar = () => {
         <li className='cursor-pointer hover:bg-[#4b4a4a] hover:rounded-md py-[2px]'><SportsBaseballIcon className='mr-5'/>Sports</li>
         <li className='cursor-pointer hover:bg-[#4b4a4a] hover:rounded-md py-[2px]'><LocalLibraryIcon className='mr-5'/>Learning</li>
         <li className='cursor-pointer hover:bg-[#4b4a4a] hover:rounded-md py-[2px]'><DiamondIcon className='mr-5'/>Fashion & Beauty</li>
+
+
+
+
       </ul>
     </div>
   )
@@ -75,7 +79,7 @@ const Sidebar = () => {
   :
 
   (
-    <div className='flex flex-col mx-3 mt-2'>
+    <div className='flex flex-col fixed'>
      <Link to="/">  <HomeIcon className='my-2 cursor-pointer'/></Link>
       <SlideshowIcon className='my-2 cursor-pointer'/>
       <SubscriptionsIcon className='my-2 cursor-pointer'/>

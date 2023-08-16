@@ -3,7 +3,7 @@ import Sidebar from './Sidebar'
 import { Outlet } from 'react-router-dom'
 const Body = () => {
   return (
-    <div className='flex m-3 mt-12'>
+    <div className=' m-3 mt-16'>
         <Sidebar/>
       <Outlet/>
     </div>
