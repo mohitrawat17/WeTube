@@ -41,14 +41,13 @@ const Header = () => {
     setSuggestions(json[1]);
     setExtra(json[0].length);
     // console.log(json);
-    if(json[0].length==0){
+    if(json[0].length===0){
       setIsShown(false)
     }
     else{
       setIsShown(true)
     }
     
-    // console.log(suggestions);
   };
   return (
     <div className="py-3 px-2 grid grid-flow-col fixed top-0 w-full z-50 bg-[#0C0C0C]">

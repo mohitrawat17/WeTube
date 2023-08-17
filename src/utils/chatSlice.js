@@ -7,9 +7,9 @@ const chatSlice=createSlice({
     },
     reducers:{
         addMessage:(state,action)=>{
-            if(state.messages.length>10){
-                state.messages.splice(10,1)
-            }
+         
+                state.messages.splice(20,1)
+           
             state.messages.unshift(action.payload); //adding element from 0th index
         },
         clearMessages:(state)=>{
