@@ -3,14 +3,15 @@ import SearchIcon from "@mui/icons-material/Search";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import { useDispatch } from "react-redux";
 import { toggleMenu } from "./utils/appSlice";
-import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { YOUTUBE_API } from "./utils/constants";
+import { addVideos } from "./utils/searchSlice";
 const Header = () => {
   const [text, setText] = useState(""); // for the working of input text
   const [suggestions, setSuggestions] = useState([]); //for mapping search suggestions
   const [isShown, setIsShown] = useState(false); //to show suggestion only when input is focused
   const[extra,setExtra]=useState(0);// extra space of suggestion when nothing is typed
+  
   const iconStyle = {
     fontSize: "2rem",
   };
@@ -33,6 +34,24 @@ const Header = () => {
       clearTimeout(timer);
     };
   }, [text]);
+
+
+  const getUpdatedVideos=async()=>{
+    const data= await fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&q=${text}&key=${process.env.REACT_APP_API_KEY}`);
+    const json=await data.json();
+
+    //if text is empty then show initial videos
+    if(text==""){
+      json.items=[];
+    }
+
+    //add videos to store
+    dispatch(addVideos(json.items));
+    
+  }
+
+  
+
 
   //api call for search suggestions
   const getSuggestions = async () => {
@@ -85,7 +104,7 @@ const Header = () => {
             }}
             onBlur={()=>setIsShown(false)}
           />
-          <div className="px-3 py-[2px] cursor-pointer text-white bg-[#4b4a4a] rounded-e-3xl">
+          <div onClick={getUpdatedVideos} className="px-3 py-[2px] cursor-pointer text-white bg-[#4b4a4a] rounded-e-3xl">
             <SearchIcon style={iconStyle} />
           </div>
         </div>
