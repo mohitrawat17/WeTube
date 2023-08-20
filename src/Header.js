@@ -36,6 +36,13 @@ const Header = () => {
   }, [text]);
 
 
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter') {
+         getUpdatedVideos();
+    }
+  };
+
+
   const getUpdatedVideos=async()=>{
     const data= await fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&q=${text}&key=${process.env.REACT_APP_API_KEY}`);
     const json=await data.json();
@@ -69,34 +76,37 @@ const Header = () => {
     
   };
   return (
-    <div className="py-3 px-2 grid grid-flow-col fixed top-0 w-full z-50 bg-[#0C0C0C]">
+    <div className="max-sm:py-2 max-sm:px-0 py-3 px-2 grid grid-flow-col fixed top-0 w-full z-50 bg-[#0C0C0C]">
       {/* hamburger, logo */}
-      <div className="flex col-span-1 ">
+      <div className="flex col-span-1">
+      <div className="text-white  cursor-pointer hover:bg-gray-700 p-[3px] hover:rounded-full max-sm:hidden">
         <MenuIcon
           onClick={() => handleToggle()}
-          className="text-white  cursor-pointer hover:bg-gray-700 p-[3px] hover:rounded-full"
+          
           style={iconStyle}
         />
+        </div>
 
         <img
           alt="logo"
-          className="w-11 h-8 ml-4 cursor-pointer"
+          className="w-11 h-8 ml-4 max-sm:ml-1 cursor-pointer max-sm:w-9 max-sm:h-6 max-sm:mt-[2px]"
           src="https://www.freepnglogos.com/uploads/youtube-play-red-logo-png-transparent-background-6.png"
         />
-        <h2 className="cursor-pointer text-white font-bold text-xl ml-1">
+        <h2 className="cursor-pointer text-white font-bold text-xl ml-1 max-sm:text-lg">
           WeTube
         </h2>
       </div>
 
       {/* search */}
-      <div className="col-span-10 justify-self-center ">
+      <div className="col-span-10 max-sm:justify-self-end max-sm:mr-3 justify-self-center ">
         <div className="flex">
           <input
+          onKeyDown={handleKeyPress}
             onChange={(e) => setText(e.target.value)}
             value={text}
             type="search"
             placeholder="Search"
-            className="text-slate-800 w-96 pl-3 rounded-s-3xl py-1 outline-none"
+            className="text-slate-800 max-lg:w-72 max-md:w-56 max-md:rounded-s-2xl max-sm:w-48 w-96 pl-3 rounded-s-3xl py-1 outline-none"
             onFocus={()=>{
               if(extra){
                 setIsShown(true);
@@ -104,14 +114,14 @@ const Header = () => {
             }}
             onBlur={()=>setIsShown(false)}
           />
-          <div onClick={getUpdatedVideos} className="px-3 py-[2px] cursor-pointer text-white bg-[#4b4a4a] rounded-e-3xl">
+          <div onClick={getUpdatedVideos} className="max-md:px-2 max-md:py-[1px] max-md:rounded-e-2xl max-sm:px-1 max-sm:py-[0px]  px-3 py-[2px] cursor-pointer text-white bg-[#4b4a4a] rounded-e-3xl">
             <SearchIcon style={iconStyle} />
           </div>
         </div>
 
         {/* search suggestions */}
         {isShown && (
-          <div className="bg-[#212121] mt-1 w-[24rem]  rounded-lg pt-4 pb-2 fixed">
+          <div className="bg-[#212121] mt-1 w-[24rem] max-sm:mr-7 rounded-lg pt-4 pb-2 fixed">
             <ul>
               {suggestions.map((data) => {
                 return (
@@ -130,7 +140,7 @@ const Header = () => {
       </div>
 
       {/* user logo */}
-      <div className="col-span-1">
+      <div className="col-span-1 max-sm:hidden">
         <AccountCircleIcon
           className="text-white cursor-pointer "
           style={iconStyle}

@@ -33,7 +33,7 @@ const Sidebar = () => {
   return isMenuOpen ?
 
   (
-    <div className='-mt-1 bg-[#0C0C0C] rgb(12, 12, 12) w-44 fixed'>
+    <div className='-mt-1 bg-[#0C0C0C] rgb(12, 12, 12) w-44 fixed max-sm:hidden'>
 
 
       <ul>

@@ -32,7 +32,7 @@ const LiveChat = () => {
   }
 
   return (
-    <div className="m-2">
+    <div className="m-2 max-sm:hidden">
       <div className=" p-2 border border-slate-600 rounded-xl h-96 overflow-y-scroll flex flex-col-reverse">
         {chatData.map((c, i) => {
           return <ChatMsg name={c.name} chat={c.msg} key={i} />;
