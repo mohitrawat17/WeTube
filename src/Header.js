@@ -106,7 +106,7 @@ const Header = () => {
             value={text}
             type="search"
             placeholder="Search"
-            className="text-slate-800 max-lg:w-72 max-md:w-56 max-md:rounded-s-2xl max-sm:w-48 w-96 pl-3 rounded-s-3xl py-1 outline-none"
+            className="text-slate-800 max-lg:w-72 max-md:w-56 max-md:rounded-s-2xl max-sm:w-40 max-sm:rounded-s-xl w-96 pl-3 rounded-s-3xl py-1 outline-none"
             onFocus={()=>{
               if(extra){
                 setIsShown(true);
@@ -114,7 +114,7 @@ const Header = () => {
             }}
             onBlur={()=>setIsShown(false)}
           />
-          <div onClick={getUpdatedVideos} className="max-md:px-2 max-md:py-[1px] max-md:rounded-e-2xl max-sm:px-1 max-sm:py-[0px]  px-3 py-[2px] cursor-pointer text-white bg-[#4b4a4a] rounded-e-3xl">
+          <div onClick={getUpdatedVideos} className="max-md:px-2 max-md:py-[1px] max-md:rounded-e-2xl max-sm:px-1 max-sm:py-[0px] px-3 py-[2px] cursor-pointer text-white bg-[#4b4a4a] rounded-e-3xl max-sm:rounded-e-xl ">
             <SearchIcon style={iconStyle} />
           </div>
         </div>
